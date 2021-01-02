@@ -10,10 +10,6 @@ db = {}
 def home():
 	return render_template("potato.html")
 
-@app.route("/<username>") #<> 은 db에서 찾을 때 자주 사용
-def contact(username):
-	return f"Hello {username} how are you doing"
-
 @app.route("/report")
 def report():
 	word = request.args.get('word')
